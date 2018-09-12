@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>> <!-- this function adds the "lang" attribute to the html tag -->
     <head>
-        <meta charset="<?php bloginfo('charset'); ?>">
+        <meta charset="<?php bloginfo('charset'); ?>"> <!-- this function adds the -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php wp_head(); ?>
     </head>

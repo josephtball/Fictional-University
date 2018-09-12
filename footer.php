@@ -1,3 +1,5 @@
+<!-- footer.php is used to contain the code for the footer of the website in WP -->
+<!-- the get_footer() function is used in other files to display the content of this file -->
         <footer class="site-footer">
 
             <div class="site-footer__inner container container--narrow">
