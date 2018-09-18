@@ -1,7 +1,9 @@
 <?php
 
 function university_files() {
+    // add script files to web pages
     wp_enqueue_script('main_university_js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, '1.0', true);
+    // add css files to web pages
     wp_enqueue_style('custom_google_fonts', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
     wp_enqueue_style('font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style('university_main_styles', get_stylesheet_uri());
