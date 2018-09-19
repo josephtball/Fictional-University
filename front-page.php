@@ -1,3 +1,4 @@
+<!-- font-page.php is used as a home/landing page -->
 <!-- this function outputs content of header.php -->
 <?php get_header(); ?>
     

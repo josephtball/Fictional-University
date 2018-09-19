@@ -1,3 +1,4 @@
+<!-- page.php is use to display individual pages -->
 <?php
   get_header();
 
