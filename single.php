@@ -1,6 +1,7 @@
 <!-- single.php is use to display individual blog posts -->
 <?php
 
+    // this function outputs content of header.php
     get_header();
     
     while(have_posts()) {
@@ -25,7 +26,7 @@
         </div>
 
     <?php }
-
+    // this function outputs content of footer.php
     get_footer();
 
 ?>

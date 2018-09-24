@@ -1,4 +1,4 @@
-<!-- "index.php" is used to display a list of blog posts and is the fallback page file -->
+<!-- "archive.php" is used to display archived posts based oh author, category, date, etc. -->
 <?php
 
     // this function outputs content of header.php
@@ -10,9 +10,17 @@
     <!-- 'get_theme_file_uri()' oupouts the location of the theme folder -->
     <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('images/ocean.jpg'); ?>);"></div>
     <div class="page-banner__content container container--narrow">
-    <h1 class="page-banner__title">Welcome to our Blog!</h1>
+    <h1 class="page-banner__title"><?php the_archive_title(); ?>
+        <!-- <?php if (is_category()) {
+                single_cat_title();
+            }
+            if (is_author()) {
+                echo 'Posts by '; the_author();
+            }
+        ?> -->
+    </h1>
     <div class="page-banner__intro">
-        <p>Keep up with our latest news.</p>
+        <p><?php the_archive_description(); ?></p>
     </div>
     </div>  
 </div>
