@@ -10,7 +10,10 @@
     <!-- 'get_theme_file_uri()' oupouts the location of the theme folder -->
     <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('images/ocean.jpg'); ?>);"></div>
     <div class="page-banner__content container container--narrow">
+    <!-- 'the_archive_title()' outputs the name of the archive. ex. category, author, date, etc. -->
     <h1 class="page-banner__title"><?php the_archive_title(); ?>
+        <!-- this block of code checks if the archive is of a category or an author's -->
+        <!-- then outputs the category title or author's name -->
         <!-- <?php if (is_category()) {
                 single_cat_title();
             }
@@ -20,6 +23,7 @@
         ?> -->
     </h1>
     <div class="page-banner__intro">
+        <!-- 'the_archive_description()' outputs the description of the category, bio of the author, etc. of the archive -->
         <p><?php the_archive_description(); ?></p>
     </div>
     </div>  
