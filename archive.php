@@ -1,4 +1,4 @@
-<!-- "archive.php" is used to display archived posts based oh author, category, date, etc. -->
+<!-- "archive.php" is used to display archived posts based on author, category, date, etc. -->
 <?php
 
     // this function outputs content of header.php
