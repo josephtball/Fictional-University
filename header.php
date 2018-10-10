@@ -30,7 +30,7 @@
                             <!-- 'echo site_url()' outputs the root site url -->
                             <li <?php if (is_page('about-us') or wp_get_post_parent_id(0) == 20) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/about-us') ?>">About Us</a></li>
                             <li><a href="#">Programs</a></li>
-                            <li><a href="#">Events</a></li>
+                            <li <?php if (get_post_type() == 'event') echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('event'); ?>">Events</a></li>
                             <li><a href="#">Campuses</a></li>
                             <!-- if statement checks if the current page has a post type of "post". If true gives class attribute to <li> -->
                             <!-- 'echo site_url()' outputs the root site url -->
