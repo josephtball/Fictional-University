@@ -40,13 +40,15 @@
                             <!-- 'the_permalink()' outputs a link. In this case to the post -->
                             <!-- 'the_title()' outputs the title of a post -->
                             <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                            <!-- 'wp_trim_words()' shortens selected content to a designated amount of words -->
-                            <!-- 'the_permalink()' outputs a link. In this case to the post -->
+                            <!-- if statement checks if the current post has an excerpt and either displays excerpt or the first 18 words of the content -->                            
                             <p><?php if (has_excerpt()) {
+                                // 'get_the_excerpt()' is used to get the excerpt of the current post and 'echo' displays it
                                 echo get_the_excerpt();
                             } else {
+                                // 'wp_trim_words()' shortens selected content to a designated amount of words
                                 echo wp_trim_words(get_the_content(), 18);
-                            } ?> <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
+                            // 'the_permalink()' outputs a link. In this case to the post
+                            } ?> <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
                         </div>
                     </div>
 
@@ -83,12 +85,14 @@
                             <!-- 'the_permalink()' outputs a link. In this case to the post -->
                             <!-- 'the_title()' outputs the title of a post -->
                             <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                            <!-- 'wp_trim_words()' shortens selected content to a designated amount of words -->
-                            <!-- 'the_permalink()' outputs a link. In this case to the post -->
+                            <!-- if statement checks if the current post has an excerpt and either displays excerpt or the first 18 words of the content -->                            
                             <p><?php if (has_excerpt()) {
+                                // 'get_the_excerpt()' is used to get the excerpt of the current post and 'echo' displays it
                                 echo get_the_excerpt();
                             } else {
+                                // 'wp_trim_words()' shortens selected content to a designated amount of words
                                 echo wp_trim_words(get_the_content(), 18);
+                            // 'the_permalink()' outputs a link. In this case to the post
                             } ?> <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
                         </div>
                     </div>
