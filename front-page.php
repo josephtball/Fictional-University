@@ -143,5 +143,6 @@
         </div>
     </div>
 </div>
+
 <!-- this function outputs content of footer.php -->
 <?php get_footer(); ?>
