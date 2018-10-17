@@ -20,10 +20,23 @@
 
             <?php
 
+                $today = date('Ymd');
+
                 // this line of code is setting up a custom query using a WP class used for quering
                 $homepageEvents = new WP_Query(array(
-                    'posts_per_page' => 2,
-                    'post_type' => 'event'
+                    'posts_per_page' => -1,
+                    'post_type' => 'event',
+                    'orderby' => 'meta_value_num',
+                    'meta_key' => 'event_date',
+                    'order' => 'ASC',
+                    'meta_query' => array(
+                        array(
+                            'key' => 'event_date',
+                            'compare' => '>=',
+                            'value' => $today,
+                            'type' => 'numeric'
+                        )
+                    )
                 ));
 
                 while($homepageEvents->have_posts()) {
@@ -143,6 +156,5 @@
         </div>
     </div>
 </div>
-
 <!-- this function outputs content of footer.php -->
 <?php get_footer(); ?>
