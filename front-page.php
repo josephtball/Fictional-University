@@ -24,7 +24,7 @@
 
                 // this line of code is setting up a custom query using a WP class used for quering
                 $homepageEvents = new WP_Query(array(
-                    'posts_per_page' => -1,
+                    'posts_per_page' => 2,
                     'post_type' => 'event',
                     'orderby' => 'meta_value_num',
                     'meta_key' => 'event_date',
@@ -45,7 +45,7 @@
                     <div class="event-summary">
                         <!-- 'the_permalink()' outputs a link. In this case to the post -->
                         <a class="event-summary__date t-center" href="<?php the_permalink(); ?>">
-                            <!-- 'the_time()' outputs the date and time in different formats of a post -->
+                            <!--  -->
                             <span class="event-summary__month"><?php
                                 $eventDate = new DateTime(get_field('event_date'));
                                 echo $eventDate->format('M');
