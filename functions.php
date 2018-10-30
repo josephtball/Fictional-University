@@ -49,4 +49,23 @@
     // in this case it launches 'university_adjust_queries' function before the posts data is gotten
     add_action('pre_get_posts', 'university_adjust_queries');
 
+
+
+// add to university-post-types.php 
+
+// Program Post Type
+register_post_type('program', array(
+    'supports' => array('title', 'editor'),
+    'rewrite' => arrau('slug' => 'programs'),
+    'has_archive' => true,
+    'public' => true,
+    'labels' => array(
+        'name' => 'Programs',
+        'add_new_item' => 'Add New Program',
+        'edit_item' => 'Edit Program',
+        'all_items' => 'All Programs',
+        'singular_name' => 'Program'
+    ),
+    'menu_icon' => 'dashicons-awards'
+));
 ?>
